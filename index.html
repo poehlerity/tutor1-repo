@@ -1,13 +1,297 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Profile</title>
+    <title>profile</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-family: 'Montserrat';
+            background-color: #121212;
+            color: rgb(224, 219, 219);
+        }
+
+        ::-webkit-scrollbar {
+            width:17px;
+            height:17px;
+        }
+        
+        ::-webkit-scrollbar {
+            background-color:#121212; /* background color */
+        }
+
+        ::-webkit-scrollbar-track {
+            border:8px solid #121212; /* background color */
+            background-color:#292929; /* grey */
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            border:8px solid #121212; /* background color */
+            background-color: rgb(255, 219, 243); /* pink */
+            min-height:24px;
+            min-width:24px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: rgb(255, 219, 243);
+            
+        }
+
+        .header {
+            background-color: rgb(80, 79, 79);
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            width: 100%;
+            z-index: 10;
+            top: 0;
+        }
+
+        .headlink {
+            margin: 20px;
+        }
+
+        .content {
+            margin: 10vw;
+            margin-top: 150px;
+            height: 275px;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .content img {
+            object-fit: cover;
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+        }
+
+        .optext {
+            margin-left: 50px;
+            vertical-align: middle;
+            text-align: justify;
+        }
+
+        .optext h1 {
+            margin-bottom: 10px;
+        }
+
+        .content2 {
+            margin: 10vw;
+            height: 275px;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .content2 img {
+            object-fit: cover;
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+        }
+
+        .optext2 {
+            vertical-align: middle;
+            text-align: justify;
+            margin-right: 50px;
+        }
+
+        .optext2 h1 {
+            margin-bottom: 10px;
+            text-align: right;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .content {
+                margin: 10vw;
+                margin-top: 150px;
+                margin-bottom: 250px;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+            }
+
+            .content img {
+                object-fit: cover;
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+            }
+
+            .optext {
+                text-align: justify;
+                margin: 0;
+            }
+
+            .optext h1 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .content2 {
+                margin-bottom: 250px;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+            }
+
+            .content2 img {
+                object-fit: cover;
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+            }
+
+            .optext2 {
+                text-align: justify;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+
+            .optext2 h1 {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .content {
+                margin: 10vw;
+                margin-top: 150px;
+                margin-bottom: 300px;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+            }
+
+            .content2 {
+                margin-bottom: 350px;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+            }
+            
+            .optext {
+                font-size: small;
+            }
+
+            .optext2 {
+                font-size: small;
+            }
+        }
+
+        @media only screen and (max-width: 350px) {
+            .header {
+                font-size: x-small;
+            }
+
+            .headlink {
+                margin: 10px;
+            }
+
+            .content {
+                margin: 10vw;
+                margin-top: 150px;
+                margin-bottom: 180px;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+            }
+
+            .content img {
+                object-fit: cover;
+                height: 175px;
+                width: 175px;
+                border-radius: 50%;
+            }
+
+            .optext {
+                text-align: justify;
+                margin: 0;
+                text-overflow: scroll;
+                font-size: 10px;
+            }
+
+            .optext h1 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .content2 {
+                margin-bottom: 180px;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+            }
+
+            .content2 img {
+                object-fit: cover;
+                height: 175px;
+                width: 175px;
+                border-radius: 50%;
+            }
+
+            .optext2 {
+                text-align: justify;
+                margin: 0;
+                margin-bottom: 20px;
+                font-size: 10px;
+            }
+
+            .optext2 h1 {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-    <h1>Halo Kawaan!</h1>
+    
+    <div class="header">
+        <div class="headlink"><a href="">home</a></div>
+        <div class="headlink">/</div>
+        <div class="headlink"><a href="">ask</a></div>
+        <div class="headlink">/</div>
+        <div class="headlink"><a href="">archive</a></div>
+    </div>
+
+    <div class="content">
+        <img src="https://i.idol.st/u/card/art/109Ayase-Eli-Will-you-wait-next-to-me-SR-0RCzsl.jpg">
+        <div class="optext">
+        <h1>Meet Eli Ayase!</h1>
+        <p>Eli Ayase is one of the nine main characters in Love Live!. She is a third year in Otonokizaka High School. Her image color is ice blue. She is the leader of BiBi, a sub-unit under μ's. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veritatis reiciendis, illum voluptas labore libero ratione. Veritatis expedita deleniti debitis, officia repudiandae dolorem, aliquid quasi quam commodi voluptatum incidunt necessitatibus!</p>
+        </div>
+    </div>
+
+    <div class="content2">
+        <div class="optext2">
+        <h1>Meet Mari Ohara!</h1>
+        <p>Mari Ohara is one of the nine main characters of Love Live! Sunshine!!. She is a third year at Uranohoshi Girls' High School as well as the school's chairwoman. Her image color is purple. She is a member of Guilty Kiss, a sub-unit under Aqours. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veritatis reiciendis, illum voluptas labore libero ratione. Veritatis expedita deleniti debitis, officia repudiandae dolorem, aliquid quasi quam commodi voluptatum incidunt necessitatibus!</p>
+        </div>
+        <img src="https://i.idol.st/u/card/art/195SR-Ohara-Mari-%E3%81%AF%E3%81%84-%E8%81%9E%E3%81%84%E3%81%A6%E3%81%BF%E3%81%A6-Aozora-Jumping-Heart-zQ2aU4.png">
+    </div>
+
+    <div class="content2">
+        <img src="https://i.idol.st/u/card/art/52Tennoji-Rina-Ok-Smile-SR-CK1TGH.jpg">
+        <div class="optext">
+        <h1>Meet Rina Tennoji!</h1>
+        <p>Rina Tennoji is one of the main characters of Love Live! Nijigasaki High School Idol Club. She is a first-year at Nijigasaki High School. Her image color is white. She is a member of QU4RTZ, a unit under the Nijigasaki High School Idol Club. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veritatis reiciendis, illum voluptas labore libero ratione. Veritatis expedita deleniti debitis, officia repudiandae dolorem, aliquid quasi quam commodi voluptatum incidunt necessitatibus!</p>
+        </div>
+    </div>
 </body>
-<script src="script.js"></script>
+
 </html>
